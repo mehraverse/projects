@@ -9,7 +9,6 @@ from sklearn.metrics import mean_squared_error
 # Fetch Stock Data
 def get_stock_data(ticker, start, end):
     stock = yf.download(ticker, start=start, end=end)
-    print(stock.head())
     return stock[['Close']]
 
 
